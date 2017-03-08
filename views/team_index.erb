@@ -1,0 +1,25 @@
+
+<h1>TODO list</h1>
+
+<ul>
+  <% @tasks.each do |task| %>
+    <li><a href="/tasks/<%= task %>"><%= task %></a></li>
+  <% end %>
+</ul>
+
+
+<form action="/tasks" method="post">
+  <fieldset>
+    <label for="task_name">New Task:</label>
+    <input type="text" id="task_name" name="task_name" required>
+  </fieldset>
+  <br>
+
+  <fieldset>
+    <input type="radio" name="pill" value="red"> Red Pill<br>
+    <input type="radio" name="pill" value="blue"> Blue Pill<br>
+  </fieldset>
+  <br>
+
+  <input type="submit">
+</form>
