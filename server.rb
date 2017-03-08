@@ -11,7 +11,7 @@ end
 
 post "/tasks" do
   if params[:task_name].strip.empty?
-    # boo
+    # render an error
   else
       task = params["task_name"]
 
@@ -22,28 +22,6 @@ post "/tasks" do
 
   redirect "/tasks"
 end
-
-
-
-
-# def add_to_file(task)
-#   File.open("tasks.txt", "a") do |file|
-#     file.puts(task)
-#   end
-# end
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 get "/tasks/:task_name" do
   # whatever comes after /tasks/ will be stowed as a variable in the params hash
